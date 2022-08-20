@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/bharathraj-v/fullstackopen-backend#readme",
   "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.30.1",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
