@@ -6,6 +6,7 @@ const cors = require('cors')
 app.use(morgan('tiny'))
 app.use(cors())
 app.use(express.json())
+app.use(express.static('build'))
 
 let persons =[
   { 
@@ -42,10 +43,6 @@ app.delete('/api/persons/:id', (request, response) => {
   persons = persons.filter(person => person.id !== id)
   response.status(202).end()
 })
-
-
-app.get("/", (request, response) => { 
-  response.send("main page") })
 
 app.get("/:id", (request, response) => {
   const id = Number(request.params.id)
